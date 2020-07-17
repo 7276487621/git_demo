@@ -1,0 +1,17 @@
+Assignment2
+
+Q(2)
+
+ANS-->
+The 4th column of Customers table is Rating.
+
+Q(3)
+ANS-->
+Another words for row are Entity,Tuple.
+Another words for column are Attribute,Method.
+
+Q(4)
+ANS-->
+
+It is only iin the case of varchar, that the row length may increase or decrease hence it is not possible to view the first or last 'N' rows of a table. 
+
