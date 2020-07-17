@@ -1,0 +1,9 @@
+Assignment3
+
+Q(1)
+ANS-->
+Yes ANSI can recoganize DATE as data type.
+
+Q(2)
+ANS-->
+DML(Data Manipulation Language) Subdivision is used to insert value in table.
