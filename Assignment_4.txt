@@ -1,0 +1,24 @@
+Assignment-4
+
+Q(1)
+ANS-->
+select *from ORDERS;
+
+Q(2)
+ANS-->
+select *from CUSTOMERS where Snum=1001;
+
+Q(3)
+ANS-->
+
+select city,sname,snum,comm from SALESPEOPLE;
+
+Q(4)
+ANS-->
+
+select Rating,Cname from CUSTOMERS where City='San Josh';
+
+Q(5)
+ANS-->
+
+select distinct Snum from ORDERS;
