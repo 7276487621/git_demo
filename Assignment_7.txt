@@ -1,0 +1,37 @@
+Assignment-7
+
+Q(1)Write a query that counts all orders for October 3.
+
+ANS-->
+
+SELECT Count(Odate) from ORDERS where Odate='1990-10-03';
+
+
+Q(2)Write a query that counts the number of different non-NULL city values in the Customers table.
+ANS-->
+
+select Count(City) from CUSTOMERS where city is not NULL;
+
+
+Q(3)3) Write a query that selects each customer’s smallest order.
+ANS-->
+
+SELECT min(Amt) "smallest order", Cnum FROM ORDERS
+GROUP BY Cnum;
+
+Q(4)Write a query that selects the first customer, in alphabetical order, whose name begins with G.
+ANS-->
+
+select *from CUSTOMERS where Cname like 'G%' order by Cname;
+
+Q(5)Write a query that selects the highest rating in each city.
+ANS-->
+
+SELECT max(Rating) "Highest Rating" from CUSTOMERS;
+
+Q(6)Write a query that counts the number of salespeople registering orders for each day. (If a salesperson has more than one order on a given day, he or she should be counted only once.).
+
+ANS-->
+
+SELECT count(Odate) ||"TOTAL", Odate FROM ORDERS
+GROUP BY Odate;
