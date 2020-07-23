@@ -1,0 +1,26 @@
+Assignment-8
+
+Q(1)
+
+ANS-->
+
+SELECT Onum,Snum,
+Amt,(Amt*12)/100 commision
+FROM ORDERS;
+
+Q(2)
+ANS-->
+
+SELECT City As "For the city",max(Rating) as"Heighest Rating:" from CUSTOMERS group by City;
+
+
+Q(3)
+ANS-->
+
+SELECT Rating,Cname,Cnum from CUSTOMERS order by Rating desc;
+
+Q(4)
+ANS-->
+
+SELECT count(odate) "TOTAL ORDERS",Odate FROM ORDERS
+GROUP BY Odate ORDER BY "TOTAL ORDERS";
