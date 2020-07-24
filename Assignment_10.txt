@@ -1,0 +1,13 @@
+Assignment-10
+
+Q(1)
+ANS-->
+SELECT m.Sname,n.Sname,m.City
+FROM SALESPEOPLE m,SALESPEOPLE n
+WHERE m.City=n.City
+AND m.Sname<n.Sname;
+
+
+Q(2)
+ANS-->
+select Cname,City from CUSTOMERS WHERE Rating=(SELECT Rating from CUSTOMERS WHERE Cname='Hoffman');
