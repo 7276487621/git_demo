@@ -1,0 +1,46 @@
+Assignment-14
+
+Q(1)Write a command that puts the following values, in their given order, into the salespeople table: city – San Jose, name – Blanco, comm – NULL, Snum – 1100.
+
+ANS-->
+
+INSERT INTO SALESPEOPLE (City,Sname,Comm,Snum)
+VALUES('San Josh','Blanco',NULL,1100);
+
+Q(2)Write a command that removes all orders from customer Clemens from the Orders table.
+
+ANS-->
+DELETE FROM ORDERS
+WHERE Cnum in (select Cnum from CUSTOMERS WHERE Cname='Clemens');
+
+
+Q(3)Write a command that increases the rating of all customers in Rome by 100.
+ANS-->
+
+Select City,Rating+100 as "Increased Rating of Rome City by 100" from CUSTOMERS WHERE City='Rome'; 
+
+				Another method using savepont and Rollback.
+	
+select *from CUSTOMERS;
+savepoint a; 
+update CUSTOMERS set Rating=Rating+100 where City='Rome';
+select *from CUSTOMERS;
+Rollback to savepoint a; 
+select *from CUSTOMERS;
+
+Q(4)Salesperson Serres has left the company. Assign her customers to Motika.
+ANS-->
+
+SELECT *from CUSTOMERS;
+SAVEPOINT a;
+update CUSTOMERS SET Snum=
+(select Snum from SALESPEOPLE
+WHERE Sname='Motika')
+where Snum=(select Snum from SALESPEOPLE WHERE Sname='serres');
+select *from CUSTOMERS;
+Rollback to savepoint a;
+
+
+
+
+
